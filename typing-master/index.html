@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111827">
+    <title>Ashutosh jasuja Free Typing masters</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Keyflow home">
+          <span class="brand-mark" aria-hidden="true">K</span>
+          <span>Ashutosh jasuja Free Typing masters</span>
+        </a>
+        <span class="topbar-note">A calmer way to get faster</span>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow"><span class="live-dot"></span> YOUR PERSONAL TYPING COACH</p>
+        <h1 id="page-title"><span class="title-highlight">Ashutosh Typing</span> master</h1>
+        <p class="intro-copy">Practice with a purpose. Build accuracy first, then let speed follow.</p>
+      </section>
+
+      <section class="practice-card" aria-labelledby="practice-title">
+        <div class="practice-toolbar">
+          <div>
+            <p class="eyebrow">PRACTICE SESSION</p>
+            <h2 id="practice-title">Type the passage below</h2>
+          </div>
+          <div class="settings">
+            <label>
+              <span>Difficulty</span>
+              <select id="level-select">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </label>
+            <label>
+              <span>Passage</span>
+              <select id="topic-select">
+                <option value="everyday">Everyday</option>
+                <option value="fables">Fables</option>
+                <option value="science">Science</option>
+                <option value="business">Business</option>
+              </select>
+            </label>
+            <label>
+              <span>Duration</span>
+              <select id="duration-select">
+                <option value="60" selected>1 minute</option>
+                <option value="120">2 minutes</option>
+                <option value="180">3 minutes</option>
+                <option value="300">5 minutes</option>
+              </select>
+            </label>
+            <button class="restart-button" id="restart-button" type="button" aria-label="Restart practice">
+              <span aria-hidden="true">&#8635;</span> Restart
+            </button>
+            <button class="restart-button next-passage-button" id="next-passage" type="button">
+              Next passage <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="metrics" aria-label="Live typing statistics">
+          <div class="metric">
+            <span class="metric-label">SPEED</span>
+            <strong><span id="wpm">0</span><small> WPM</small></strong>
+          </div>
+          <div class="metric">
+            <span class="metric-label">ACCURACY</span>
+            <strong><span id="accuracy">100</span><small>%</small></strong>
+          </div>
+          <div class="metric">
+            <span class="metric-label">TIME LEFT</span>
+            <strong><span id="time-left">01:00</span><small> min</small></strong>
+          </div>
+          <div class="metric">
+            <span class="metric-label">BEST STYLE</span>
+            <strong><span id="best-score">--</span><small id="best-suffix"></small></strong>
+          </div>
+        </div>
+
+        <div class="typing-panel" id="typing-panel">
+          <div class="passage" id="passage" aria-hidden="true"></div>
+          <textarea
+            id="typing-input"
+            class="typing-input"
+            aria-label="Type the passage shown above"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            maxlength="500"
+            rows="1"
+          ></textarea>
+          <button class="start-prompt" id="start-prompt" type="button">
+            Click here or start typing
+          </button>
+        </div>
+
+        <div class="session-footer">
+          <p id="session-message" role="status" aria-live="polite">Start typing to begin your timer.</p>
+          <span><kbd>Backspace</kbd> correct mistakes as you go</span>
+        </div>
+
+        <section class="result-panel" id="result-panel" aria-live="polite" hidden>
+          <div class="result-score">
+            <span class="metric-label">YOUR TYPING STYLE SCORE</span>
+            <strong><span id="style-score">0</span><small>/100</small></strong>
+          </div>
+          <div class="result-copy">
+            <h3 id="result-title">Nice work!</h3>
+            <p id="result-feedback"></p>
+          </div>
+          <button class="result-restart" id="result-restart" type="button">Try again</button>
+        </section>
+      </section>
+
+      <section class="coach-grid" aria-label="Typing lessons">
+        <article class="coach-card">
+          <span class="coach-icon" aria-hidden="true">01</span>
+          <div>
+            <h2>Start with home row</h2>
+            <p>Rest your left fingers on A-S-D-F and right fingers on J-K-L-;. Return to these keys after each reach.</p>
+          </div>
+        </article>
+        <article class="coach-card">
+          <span class="coach-icon" aria-hidden="true">02</span>
+          <div>
+            <h2>Keep an easy rhythm</h2>
+            <p>Look at the screen, keep your shoulders relaxed, and aim for even keystrokes instead of rushing.</p>
+          </div>
+        </article>
+        <article class="coach-card score-explainer">
+          <span class="coach-icon" aria-hidden="true">03</span>
+          <div>
+            <h2>What does style score mean?</h2>
+            <p>It combines accuracy, keystroke rhythm, and pace. It measures this practice session, not hand position or ergonomics.</p>
+          </div>
+        </article>
+      </section>
+      <footer class="page-footer">Small, steady improvements add up.</footer>
+    </main>
+  </body>
+</html>
